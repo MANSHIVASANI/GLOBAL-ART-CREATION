@@ -1,0 +1,6 @@
+{
+  "name": "Global Art Creation",
+  "description": "A high-end art & sculpture studio dedicated to handcrafted luxury installations, bespoke sculptures, and architectural murals.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
