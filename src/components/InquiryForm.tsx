@@ -63,7 +63,7 @@ export default function InquiryForm() {
           <div className="space-y-8 pt-8 border-t border-vintage-cream/10">
             {/* Studio Address */}
             <button
-              onClick={() => window.open('https://maps.google.com/maps?q=Gandhidham,+Gujarat,+India', '_blank')}
+              onClick={() => window.open('https://maps.google.com/maps?q=Plot+No.30+Opp.+Nehru+Park,+Ward+No.11/BF,+Gandhidham', '_blank')}
               className="flex items-start space-x-4 hover:opacity-80 transition-opacity cursor-pointer bg-transparent border-none p-0 focus:outline-none"
               aria-label="Open location in Google Maps"
             >
@@ -73,10 +73,10 @@ export default function InquiryForm() {
               <div>
                 <span className="font-mono text-[9px] tracking-widest text-neutral-400 block mb-0.5">STUDIO ATELIER</span>
                 <span className="font-sans text-xs font-semibold tracking-wider text-vintage-cream uppercase block">
-                  Gandhidham, Kutch
+                  Plot No.30 Opp. Nehru Park
                 </span>
                 <span className="font-sans text-xs text-neutral-400 font-light block">
-                  Gujarat, India
+                  Ward No.11/BF, Gandhidham
                 </span>
               </div>
             </button>

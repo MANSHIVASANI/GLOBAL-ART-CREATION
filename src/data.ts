@@ -17,7 +17,7 @@ import lippanPdf from './assets/pdf/Lippan_Work.pdf';
 import sculpturesPdf from './assets/pdf/Sculptures_art.pdf';
 import siporexPdf from './assets/pdf/Siporex_Wall.pdf';
 import wallSculpturePdf from './assets/pdf/Wall_Sculpture.pdf';
-import ecoFriendlyPdf from './assets/pdf/ECO_FRIENDLY.pdf';
+import woodenKitchenWearPdf from './assets/pdf/WOODEN KITCHEN WEAR.pdf';
 
 import { SignatureCategory, ServiceDetail, ArchiveItem } from './types';
 
@@ -117,7 +117,7 @@ export const SERVICES: ServiceDetail[] = [
     description: 'Eco-conscious artistic creations that blend sustainability with elegant design. Our natural materials and sustainable practices ensure that every artwork contributes to a healthier environment while maintaining the highest standards of aesthetic beauty and craftsmanship.',
     tags: ['ECO-FRIENDLY', 'SUSTAINABLE', 'NATURAL'],
     image: luxuryConcept,
-    pdf: ecoFriendlyPdf
+    pdf: woodenKitchenWearPdf
   }
 ];
 

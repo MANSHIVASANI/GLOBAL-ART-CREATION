@@ -88,10 +88,6 @@ export default function Hero({ onInquireClick }: HeroProps) {
               <span className="font-mono text-[10px] tracking-[0.2em] text-neutral-400 block mb-1">STUDIO BASE</span>
               <span className="font-sans text-xs tracking-wider font-semibold text-vintage-charcoal">GANDHIDHAM</span>
             </div>
-            <div>
-              <span className="font-mono text-[10px] tracking-[0.2em] text-neutral-400 block mb-1">FOUNDED IN</span>
-              <span className="font-sans text-xs tracking-wider font-semibold text-vintage-charcoal">2009</span>
-            </div>
           </div>
         </div>
 
