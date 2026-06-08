@@ -17,7 +17,7 @@ import lippanPdf from './assets/pdf/Lippan_Work.pdf';
 import sculpturesPdf from './assets/pdf/Sculptures_art.pdf';
 import siporexPdf from './assets/pdf/Siporex_Wall.pdf';
 import wallSculpturePdf from './assets/pdf/Wall_Sculpture.pdf';
-import woodenKitchenWearPdf from './assets/pdf/WOODEN KITCHEN WEAR.pdf';
+import woodenKitchenWearPdf from './assets/pdf/Wooden kitchenware_GlobalArtCreation.pdf';
 
 import { SignatureCategory, ServiceDetail, ArchiveItem } from './types';
 
