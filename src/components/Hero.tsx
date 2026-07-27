@@ -12,7 +12,10 @@ interface HeroProps {
 }
 
 export default function Hero({ onInquireClick }: HeroProps) {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(() => {
+    const defaultIndex = SIGNATURE_CATEGORIES.findIndex((cat) => cat.title === 'SIPOREX WALL ART');
+    return defaultIndex >= 0 ? defaultIndex : 0;
+  });
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const activeCategory = SIGNATURE_CATEGORIES[activeIndex];

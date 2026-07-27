@@ -33,17 +33,8 @@ export {
 
 export const SIGNATURE_CATEGORIES: SignatureCategory[] = [
   {
-    id: 'lippan-kaam',
-    num: '01',
-    title: 'LIPPAN WORK',
-    description: 'A traditional masterpiece of Kutch, known as \"Lippan Kaam\" or \"Chittar Kaam\". Exquisitely handcrafted with mud, clay wash, and inlaid mirror glasses.',
-    year: '2009',
-    image: lippanMural,
-    location: 'Gandhidham Atelier, Kutch'
-  },
-  {
     id: 'siporex-carving',
-    num: '02',
+    num: '01',
     title: 'SIPOREX WALL ART',
     description: 'Custom three-dimensional stone carving or mural hand-carved into lightweight aerated concrete blocks. Mimics ancient cave sculpture with timeless elegance.',
     year: '2015',
@@ -52,7 +43,7 @@ export const SIGNATURE_CATEGORIES: SignatureCategory[] = [
   },
   {
     id: 'fiber-mural',
-    num: '03',
+    num: '02',
     title: 'FIBER WALL MURAL',
     description: 'Decorative, three-dimensional artworks and heavy-duty coverings crafted from advanced glass-reinforced plastic (FRP) and multi-tonal custom metallic finishes.',
     year: '2018',
@@ -61,12 +52,21 @@ export const SIGNATURE_CATEGORIES: SignatureCategory[] = [
   },
   {
     id: 'metal-sculpture',
-    num: '04',
+    num: '03',
     title: 'METAL SCULPTURE',
     description: 'Bespoke hand-hammered brass, copper, and bronze organic structures that command focus and define architectural spaces.',
     year: '2021',
     image: goldenSculpture,
     location: 'Corporate Lobby, IN'
+  },
+  {
+    id: 'lippan-kaam',
+    num: '04',
+    title: 'LIPPAN WORK',
+    description: 'A traditional masterpiece of Kutch, known as "Lippan Kaam" or "Chittar Kaam". Exquisitely handcrafted with mud, clay wash, and inlaid mirror glasses.',
+    year: '2009',
+    image: lippanMural,
+    location: 'Gandhidham Atelier, Kutch'
   }
 ];
 
