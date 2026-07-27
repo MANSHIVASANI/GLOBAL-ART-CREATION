@@ -71,7 +71,7 @@ export default function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
               </div>
               <button
                 onClick={onClose}
-                className="p-2 text-vintage-charcoal hover:text-luxury-gold bg-vintage-sand/50 rounded-full cursor-pointer focus:outline-none"
+                className="p-2 text-vintage-charcoal hover:text-black bg-vintage-sand/50 rounded-full cursor-pointer focus:outline-none"
               >
                 <X className="w-4 h-4" />
               </button>
@@ -104,7 +104,7 @@ export default function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         placeholder="E.g. Adrian Carter"
-                        className="w-full bg-vintage-sand/40 border-b border-vintage-sand focus:border-luxury-gold py-2.5 px-3 text-sm text-vintage-charcoal outline-none transition-colors rounded-none placeholder-neutral-400 font-sans"
+                        className="w-full bg-vintage-sand/40 border-b border-vintage-sand focus:border-black py-2.5 px-3 text-sm text-vintage-charcoal outline-none transition-colors rounded-none placeholder-neutral-400 font-sans"
                       />
                     </div>
 
@@ -119,7 +119,7 @@ export default function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder="E.g. adrian@domain.com"
-                        className="w-full bg-vintage-sand/40 border-b border-vintage-sand focus:border-luxury-gold py-2.5 px-3 text-sm text-vintage-charcoal outline-none transition-colors rounded-none placeholder-neutral-400 font-sans"
+                        className="w-full bg-vintage-sand/40 border-b border-vintage-sand focus:border-black py-2.5 px-3 text-sm text-vintage-charcoal outline-none transition-colors rounded-none placeholder-neutral-400 font-sans"
                       />
                     </div>
 
@@ -131,7 +131,7 @@ export default function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
                       <select
                         value={category}
                         onChange={(e) => setCategory(e.target.value)}
-                        className="w-full bg-vintage-sand/50 border border-vintage-sand focus:border-luxury-gold py-3 px-3 text-xs text-vintage-charcoal tracking-wide outline-none transition-colors rounded-none font-sans uppercase"
+                        className="w-full bg-vintage-sand/50 border border-vintage-sand focus:border-black py-3 px-3 text-xs text-vintage-charcoal tracking-wide outline-none transition-colors rounded-none font-sans uppercase"
                       >
                         {categories.map((cat) => (
                           <option key={cat} value={cat}>
@@ -145,7 +145,7 @@ export default function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full bg-vintage-charcoal text-white hover:bg-luxury-gold hover:text-vintage-charcoal text-xs tracking-[0.25em] py-4 transition-all duration-300 font-bold flex items-center justify-center space-x-2 rounded-none uppercase cursor-pointer"
+                    className="w-full bg-vintage-charcoal text-white hover:bg-black hover:text-white text-xs tracking-[0.25em] py-4 transition-all duration-300 font-bold flex items-center justify-center space-x-2 rounded-none uppercase cursor-pointer"
                   >
                     {loading ? (
                       <>
@@ -168,7 +168,7 @@ export default function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
                   animate={{ opacity: 1, scale: 1 }}
                   className="space-y-6 text-center py-12 flex flex-col items-center my-auto"
                 >
-                  <div className="w-16 h-16 bg-luxury-gold/10 text-luxury-gold flex items-center justify-center rounded-full border border-luxury-gold/35 animate-bounce">
+                  <div className="w-16 h-16 bg-black/10 text-black flex items-center justify-center rounded-full border border-black/20 animate-bounce">
                     <CheckCircle className="w-8 h-8" />
                   </div>
                   
@@ -176,7 +176,7 @@ export default function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
                     <h3 className="font-serif text-xl font-light text-vintage-charcoal">
                       Consultation Assigned
                     </h3>
-                    <p className="font-mono text-[9px] text-luxury-gold tracking-widest font-semibold uppercase">
+                    <p className="font-mono text-[9px] text-black tracking-widest font-semibold uppercase">
                       CONFIRMATION TICKET: #ART-{Math.floor(2000 + Math.random() * 8000)}
                     </p>
                   </div>
@@ -186,7 +186,7 @@ export default function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
                   </p>
 
                   <div className="p-4 bg-vintage-sand/50 scale-95 border border-vintage-sand flex items-start space-x-3 text-left">
-                    <Mail className="w-4 h-4 text-luxury-gold mt-0.5 shrink-0" />
+                    <Mail className="w-4 h-4 text-black mt-0.5 shrink-0" />
                     <p className="font-sans text-[10px] text-neutral-500 leading-normal">
                       Please double-check your spam fold if our digital atelier specification sheet does not arrive shortly.
                     </p>
@@ -198,7 +198,7 @@ export default function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
                       setName('');
                       setEmail('');
                     }}
-                    className="font-mono text-[8px] tracking-[0.2em] font-bold text-luxury-gold hover:text-vintage-charcoal uppercase cursor-pointer"
+                    className="font-mono text-[8px] tracking-[0.2em] font-bold text-black hover:text-vintage-charcoal uppercase cursor-pointer"
                   >
                     SUBMIT ANOTHER SLOT
                   </button>

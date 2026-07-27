@@ -78,7 +78,7 @@ export default function Header({ onInquireClick }: HeaderProps) {
           onClick={() => handleNavLink('#home')}
           className="text-left group cursor-pointer focus:outline-none"
         >
-          <span className="font-serif tracking-[0.25em] text-xl font-bold text-vintage-charcoal group-hover:text-luxury-gold transition-colors block leading-none">
+          <span className="font-serif tracking-[0.25em] text-xl font-bold text-vintage-charcoal group-hover:text-black transition-colors block leading-none">
             GLOBAL ART CREATION
           </span>
           <span className="font-mono text-[9px] tracking-[0.3em] text-neutral-400 group-hover:text-vintage-charcoal transition-colors block mt-1 uppercase">
@@ -100,7 +100,7 @@ export default function Header({ onInquireClick }: HeaderProps) {
                 {isActive && (
                   <motion.span
                     layoutId="activeNavLine"
-                    className="absolute -bottom-1 left-0 w-full h-[1.5px] bg-luxury-gold"
+                    className="absolute -bottom-1 left-0 w-full h-[1.5px] bg-black"
                     transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                   />
                 )}
@@ -142,7 +142,7 @@ export default function Header({ onInquireClick }: HeaderProps) {
                     key={item.hash}
                     onClick={() => handleNavLink(item.hash)}
                     className={`font-sans text-sm tracking-[0.15em] font-medium text-left py-2 border-b border-vintage-sand focus:outline-none uppercase ${
-                      isActive ? 'text-luxury-gold' : 'text-vintage-charcoal/70'
+                      isActive ? 'text-black' : 'text-vintage-charcoal/70'
                     }`}
                   >
                     {item.label}

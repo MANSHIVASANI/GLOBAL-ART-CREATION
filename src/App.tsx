@@ -22,7 +22,7 @@ export default function App() {
   };
 
   return (
-    <div id="studio-app-root" className="min-h-screen flex flex-col justify-between selection:bg-luxury-gold selection:text-vintage-charcoal">
+    <div id="studio-app-root" className="min-h-screen flex flex-col justify-between selection:bg-black selection:text-white">
       {/* Decorative architectural background grids */}
       <div className="fixed inset-0 pointer-events-none select-none z-0 opacity-[0.02] bg-[radial-gradient(#121211_1px,transparent_1px)] [background-size:24px_24px]" />
 
@@ -54,7 +54,7 @@ export default function App() {
           <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 text-center md:text-left">
             <button
               onClick={() => window.open('https://maps.google.com/maps?q=Gandhidham,+Gujarat,+India', '_blank')}
-              className="flex items-center space-x-2 hover:text-luxury-gold transition-colors cursor-pointer focus:outline-none"
+              className="flex items-center space-x-2 hover:text-white transition-colors cursor-pointer focus:outline-none"
               aria-label="Open location in Google Maps"
             >
               <MapPin className="w-4 h-4" />
@@ -80,7 +80,7 @@ export default function App() {
             {/* Scroll back to top trigger */}
             <button
               onClick={scrollToTop}
-              className="p-2 bg-white/5 hover:bg-luxury-gold hover:text-vintage-charcoal text-white rounded-none border border-white/10 transition-colors focus:outline-none cursor-pointer"
+              className="p-2 bg-white/5 hover:bg-white hover:text-black text-white rounded-none border border-white/10 transition-colors focus:outline-none cursor-pointer"
               aria-label="Scroll back to top"
             >
               <ArrowUp className="w-3.5 h-3.5" />

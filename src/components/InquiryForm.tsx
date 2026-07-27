@@ -5,7 +5,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Mail, Phone, MapPin, Send, Calendar, Sparkles } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Calendar, Sparkles, FileText } from 'lucide-react';
 import { InquiryFormState } from '../types';
 
 export default function InquiryForm() {
@@ -24,7 +24,7 @@ export default function InquiryForm() {
     if (!form.fullName || !form.email) return;
 
     setIsSubmitting(true);
-    
+
     const message = `Hello Global Art Creation,\n\nI would like to submit an inquiry for a new project.\n\n*Name:* ${form.fullName}\n*Email:* ${form.email}\n*Service Category:* ${form.serviceCategory}\n*Specifications:*\n${form.specifications || 'None provided'}\n\nLooking forward to hearing from you.`;
     const whatsappUrl = `https://wa.me/919106019993?text=${encodeURIComponent(message)}`;
 
@@ -43,85 +43,78 @@ export default function InquiryForm() {
   ];
 
   return (
-    <section id="contact" className="py-24 bg-vintage-charcoal text-vintage-cream px-6 md:px-12 relative overflow-hidden">
-      {/* Absolute decorative star lights or abstract blur */}
-      <div className="absolute top-1/2 left-0 w-96 h-96 bg-luxury-gold/5 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute top-0 right-10 w-64 h-64 bg-white/5 rounded-full blur-[100px] pointer-events-none" />
+    <section id="contact" className="py-24 bg-white text-vintage-charcoal px-6 md:px-12 relative overflow-hidden border-t border-vintage-sand/40">
+      <div className="absolute top-1/2 left-0 w-96 h-96 bg-black/5 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-0 right-10 w-64 h-64 bg-vintage-sand/40 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 relative z-10">
-        
-        {/* Left Column: Coordinates & Social handles */}
         <div className="lg:col-span-5 flex flex-col justify-between space-y-12">
-          
           <div className="space-y-6">
-            <h2 className="font-serif text-4xl md:text-6xl font-light leading-[1.1] tracking-tight">
+            <h2 className="font-serif text-4xl md:text-6xl font-semibold leading-[1.08] tracking-[-0.02em]">
               Start Your <br />
-              <span className="italic font-normal font-serif text-luxury-gold">Masterpiece</span>
+              <span className="italic font-semibold font-serif text-black">Masterpiece</span>
             </h2>
           </div>
 
-          <div className="space-y-8 pt-8 border-t border-vintage-cream/10">
-            {/* Studio Address */}
+          <div className="rounded-none border border-vintage-sand bg-vintage-charcoal p-6 md:p-8 space-y-7 shadow-[0_20px_60px_rgba(0,0,0,0.12)]">
+            <div className="inline-flex items-center gap-2 rounded-none border border-white/20 bg-white/[0.08] px-3 py-2 text-[9px] font-mono font-semibold uppercase tracking-[0.24em] text-white">
+              <FileText className="w-3.5 h-3.5 text-white" />
+              PDF Specification Dossier
+            </div>
+
             <button
               onClick={() => window.open('https://maps.google.com/maps?q=Plot+No.30+Opp.+Nehru+Park,+Ward+No.11/BF,+Gandhidham', '_blank')}
-              className="flex items-start space-x-4 hover:opacity-80 transition-opacity cursor-pointer bg-transparent border-none p-0 focus:outline-none"
+              className="flex items-start space-x-4 hover:opacity-90 transition-opacity cursor-pointer bg-transparent border-none p-0 focus:outline-none w-full text-left"
               aria-label="Open location in Google Maps"
             >
-              <div className="p-2.5 bg-white/5 rounded-none text-luxury-gold border border-white/10 mt-1">
+              <div className="p-2.5 bg-white/10 rounded-none text-white border border-white/10 mt-1">
                 <MapPin className="w-4 h-4" />
               </div>
               <div>
-                <span className="font-mono text-[9px] tracking-widest text-neutral-400 block mb-0.5">STUDIO ATELIER</span>
-                <span className="font-sans text-xs font-semibold tracking-wider text-vintage-cream uppercase block">
+                <span className="font-mono text-[9px] tracking-[0.24em] text-neutral-400 block mb-0.5 font-semibold">STUDIO ATELIER</span>
+                <span className="font-sans text-xs font-semibold tracking-[0.2em] text-white uppercase block">
                   Plot No.30 Opp. Nehru Park
                 </span>
-                <span className="font-sans text-xs text-neutral-400 font-light block">
+                <span className="font-sans text-xs text-neutral-400 font-medium block">
                   Ward No.11/BF, Gandhidham
                 </span>
               </div>
             </button>
 
-            {/* Email Contact */}
             <div className="flex items-start space-x-4">
-              <div className="p-2.5 bg-white/5 rounded-none text-luxury-gold border border-white/10 mt-1">
+              <div className="p-2.5 bg-white/10 rounded-none text-white border border-white/10 mt-1">
                 <Mail className="w-4 h-4" />
               </div>
               <div>
-                <span className="font-mono text-[9px] tracking-widest text-neutral-400 block mb-0.5">CORRESPONDENCE</span>
+                <span className="font-mono text-[9px] tracking-[0.24em] text-neutral-400 block mb-0.5 font-semibold">CORRESPONDENCE</span>
                 <a
                   href="mailto:globalartcreation@gmail.com"
-                  className="font-sans text-xs font-semibold tracking-wider text-luxury-gold hover:text-luxury-gold-dark lowercase block transition-colors"
+                  className="font-sans text-xs font-semibold tracking-[0.18em] text-white hover:text-neutral-300 lowercase block transition-colors"
                 >
                   globalartcreation@gmail.com
                 </a>
               </div>
             </div>
 
-            {/* Direct Phone inquiries */}
             <div className="flex items-start space-x-4">
-              <div className="p-2.5 bg-white/5 rounded-none text-luxury-gold border border-white/10 mt-1">
+              <div className="p-2.5 bg-white/10 rounded-none text-white border border-white/10 mt-1">
                 <Phone className="w-4 h-4" />
               </div>
               <div>
-                <span className="font-mono text-[9px] tracking-widest text-neutral-400 block mb-0.5">INQUIRIES</span>
+                <span className="font-mono text-[9px] tracking-[0.24em] text-neutral-400 block mb-0.5 font-semibold">INQUIRIES</span>
                 <a
                   href="tel:+919106019993"
-                  className="font-sans text-xs font-semibold tracking-wider text-vintage-cream uppercase block hover:text-luxury-gold transition-colors"
+                  className="font-sans text-xs font-semibold tracking-[0.18em] text-white uppercase block hover:text-neutral-300 transition-colors"
                 >
                   +91 91060 19993
                 </a>
               </div>
             </div>
           </div>
-
-
-
         </div>
 
-        {/* Right Column: Dynamic Inquiry Submission Box */}
         <div className="lg:col-span-7" id="commission-form-wrapper">
-          <div className="bg-white/[0.02] border border-white/10 rounded-none p-8 md:p-12 shadow-2xl relative">
-            
+          <div className="bg-vintage-charcoal text-vintage-cream border border-vintage-charcoal/10 rounded-none p-8 md:p-12 shadow-[0_24px_90px_rgba(0,0,0,0.14)] relative">
             <AnimatePresence mode="wait">
               {!isSuccess ? (
                 <motion.form
@@ -132,13 +125,12 @@ export default function InquiryForm() {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                 >
-                  <p className="font-serif text-neutral-300 italic text-sm md:text-base font-light border-b border-white/5 pb-4">
+                  <p className="font-serif text-neutral-300 italic text-sm md:text-base font-medium border-b border-white/10 pb-4">
                     Submit your details and preferences to register a custom architectural design slot with our lead conceptualists.
                   </p>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {/* Full Name input */}
-                    <div className="relative group/field focus-within:border-luxury-gold/50 transition-colors">
+                    <div className="relative group/field focus-within:border-white/50 transition-colors">
                       <label className="font-mono text-[8px] tracking-[0.3em] text-neutral-400 block mb-2 uppercase font-semibold">
                         FULL NAME *
                       </label>
@@ -148,12 +140,11 @@ export default function InquiryForm() {
                         value={form.fullName}
                         onChange={(e) => setForm({ ...form, fullName: e.target.value })}
                         placeholder="Johnathan Doe"
-                        className="w-full bg-transparent border-b border-white/15 focus:border-luxury-gold py-2 text-sm tracking-wide text-white outline-none transition-colors rounded-none placeholder-neutral-500 font-sans"
+                        className="w-full bg-transparent border-b border-white/15 focus:border-white py-2 text-sm tracking-[0.16em] text-white outline-none transition-colors rounded-none placeholder-neutral-500 font-sans"
                       />
                     </div>
 
-                    {/* Email address input */}
-                    <div className="relative group/field focus-within:border-luxury-gold/50 transition-colors">
+                    <div className="relative group/field focus-within:border-white/50 transition-colors">
                       <label className="font-mono text-[8px] tracking-[0.3em] text-neutral-400 block mb-2 uppercase font-semibold">
                         EMAIL *
                       </label>
@@ -163,12 +154,11 @@ export default function InquiryForm() {
                         value={form.email}
                         onChange={(e) => setForm({ ...form, email: e.target.value })}
                         placeholder="john@architect.com"
-                        className="w-full bg-transparent border-b border-white/15 focus:border-luxury-gold py-2 text-sm tracking-wide text-white outline-none transition-colors rounded-none placeholder-neutral-500 font-sans"
+                        className="w-full bg-transparent border-b border-white/15 focus:border-white py-2 text-sm tracking-[0.16em] text-white outline-none transition-colors rounded-none placeholder-neutral-500 font-sans"
                       />
                     </div>
                   </div>
 
-                  {/* Service Category Selector */}
                   <div>
                     <label className="font-mono text-[8px] tracking-[0.3em] text-neutral-400 block mb-3 uppercase font-semibold">
                       SERVICE CATEGORY
@@ -181,9 +171,9 @@ export default function InquiryForm() {
                             key={cat}
                             type="button"
                             onClick={() => setForm({ ...form, serviceCategory: cat })}
-                            className={`p-3 text-center transition-colors text-[9px] tracking-wider font-semibold border uppercase cursor-pointer rounded-none focus:outline-none ${
+                            className={`p-3 text-center transition-colors text-[9px] tracking-[0.2em] font-semibold border uppercase cursor-pointer rounded-none focus:outline-none ${
                               isSelected
-                                ? 'bg-luxury-gold border-luxury-gold text-vintage-charcoal'
+                                ? 'bg-white border-white text-black'
                                 : 'bg-transparent border-white/10 hover:border-white/30 text-neutral-400'
                             }`}
                           >
@@ -194,7 +184,6 @@ export default function InquiryForm() {
                     </div>
                   </div>
 
-                  {/* Specifications Textarea */}
                   <div>
                     <label className="font-mono text-[8px] tracking-[0.3em] text-neutral-400 block mb-2 uppercase font-semibold">
                       SPECIFICATIONS
@@ -204,15 +193,14 @@ export default function InquiryForm() {
                       onChange={(e) => setForm({ ...form, specifications: e.target.value })}
                       rows={4}
                       placeholder="Describe your vision (e.g. Lobby focal wall dimensions, color palette, architectural lighting coordinates...)"
-                      className="w-full bg-white/[0.02] border border-white/10 hover:border-white/20 focus:border-luxury-gold text-sm text-white p-4 outline-none transition-all placeholder-neutral-510 font-sans leading-relaxed resize-none rounded-none"
+                        className="w-full bg-white/[0.04] border border-white/10 hover:border-white/20 focus:border-white text-sm text-white p-4 outline-none transition-all placeholder-neutral-500 font-sans leading-relaxed resize-none rounded-none"
                     />
                   </div>
 
-                  {/* Submit commission button */}
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-luxury-gold text-vintage-charcoal hover:bg-white text-xs tracking-[0.25em] font-bold py-4 transition-all duration-300 select-none cursor-pointer flex items-center justify-center space-x-3 rounded-none uppercase focus:outline-none"
+                    className="w-full bg-white text-black hover:bg-neutral-200 text-xs tracking-[0.24em] font-semibold py-4 transition-all duration-300 select-none cursor-pointer flex items-center justify-center space-x-3 rounded-none uppercase focus:outline-none"
                   >
                     {isSubmitting ? (
                       <>
@@ -228,7 +216,6 @@ export default function InquiryForm() {
                   </button>
                 </motion.form>
               ) : (
-                // Success View: Elegant credentials letter/envelope design
                 <motion.div
                   key="inquirysuccess"
                   initial={{ opacity: 0, scale: 0.95 }}
@@ -236,26 +223,30 @@ export default function InquiryForm() {
                   exit={{ opacity: 0 }}
                   className="py-12 text-center space-y-6 flex flex-col items-center"
                 >
-                  <div className="p-4 bg-luxury-gold/10 text-luxury-gold rounded-full border border-luxury-gold/20 animate-pulse">
+                  <div className="p-4 bg-white/10 text-white rounded-full border border-white/20 animate-pulse">
                     <Sparkles className="w-8 h-8" />
                   </div>
-                  
+
                   <div className="space-y-2 max-w-lg">
-                    <h3 className="font-serif text-2xl font-light text-white">
+                    <h3 className="font-serif text-2xl font-semibold text-white">
                       Inquiry Registered
                     </h3>
-                    <p className="font-sans text-xs tracking-widest text-luxury-gold/90 font-semibold uppercase">
+                    <p className="font-sans text-xs tracking-[0.24em] text-white font-semibold uppercase">
                       PROPOSAL ID: {Math.floor(100000 + Math.random() * 900000)}
                     </p>
                   </div>
 
-                  <p className="font-sans text-xs md:text-sm text-neutral-300 font-light leading-relaxed max-w-md">
-                    Thank you, <strong className="text-white font-semibold">{form.fullName}</strong>. Your request for <span className="text-luxury-gold font-medium">"{form.serviceCategory}"</span> has been queued for our master conceptualists. 
+                  <p className="font-sans text-xs md:text-sm text-neutral-300 font-medium leading-relaxed max-w-md">
+                    Thank you, <strong className="text-white font-semibold">{form.fullName}</strong>. Your request for <span className="text-white font-semibold">"{form.serviceCategory}"</span> has been queued for our master conceptualists.
                   </p>
 
-                  <div className="bg-white/[0.02] p-4 border border-white/5 rounded-none text-left w-full space-y-3">
+                  <div className="bg-white/[0.04] p-4 border border-white/10 rounded-none text-left w-full space-y-3">
+                    <div className="inline-flex items-center gap-2 rounded-none border border-white/20 bg-vintage-charcoal px-3 py-2 text-[9px] font-mono font-semibold uppercase tracking-[0.24em] text-white">
+                      <FileText className="w-3.5 h-3.5 text-white" />
+                      PDF Specification Dossier
+                    </div>
                     <div className="flex items-center space-x-2 text-[10px] text-neutral-400 font-mono">
-                      <Calendar className="w-3.5 h-3.5 text-luxury-gold" />
+                      <Calendar className="w-3.5 h-3.5 text-white" />
                       <span>CORRESPONDENCE ASSIGNMENT</span>
                     </div>
                     <p className="font-sans text-[11px] leading-relaxed text-neutral-300">
@@ -273,17 +264,15 @@ export default function InquiryForm() {
                         specifications: ''
                       });
                     }}
-                    className="font-mono text-[9px] tracking-widest font-semibold text-luxury-gold hover:text-white uppercase hover:underline cursor-pointer focus:outline-none"
+                    className="font-mono text-[9px] tracking-[0.24em] font-semibold text-white hover:text-neutral-300 uppercase hover:underline cursor-pointer focus:outline-none"
                   >
                     ← SUBMIT ANOTHER PROPOSAL
                   </button>
                 </motion.div>
               )}
             </AnimatePresence>
-
           </div>
         </div>
-
       </div>
     </section>
   );
