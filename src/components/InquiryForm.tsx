@@ -7,6 +7,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Mail, Phone, MapPin, Send, Calendar, Sparkles, FileText } from 'lucide-react';
 import { InquiryFormState } from '../types';
+import contactBackground from '../assets/images/textural_wall_1779275011930.png';
 
 export default function InquiryForm() {
   const [form, setForm] = useState<InquiryFormState>({
@@ -43,7 +44,17 @@ export default function InquiryForm() {
   ];
 
   return (
-    <section id="contact" className="py-24 bg-white text-vintage-charcoal px-6 md:px-12 relative overflow-hidden border-t border-vintage-sand/40">
+    <section
+      id="contact"
+      className="py-24 text-vintage-charcoal px-6 md:px-12 relative overflow-hidden border-t border-vintage-sand/40"
+      style={{
+        backgroundImage: `linear-gradient(rgba(17, 17, 17, 0.42), rgba(17, 17, 17, 0.42)), url(${contactBackground})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
+      <div className="absolute inset-0 bg-black/10 pointer-events-none" />
       <div className="absolute top-1/2 left-0 w-96 h-96 bg-black/5 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute top-0 right-10 w-64 h-64 bg-vintage-sand/40 rounded-full blur-[100px] pointer-events-none" />
 
